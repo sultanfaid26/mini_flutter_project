@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'core.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      // getPages: [],
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return GetMaterialApp(
+      initialRoute: Routes.PHOTOS,
+      getPages: AppPages.routes,
     );
   }
 }
